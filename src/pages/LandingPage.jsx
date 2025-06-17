@@ -12,12 +12,12 @@ const LandingPage = () => {
                 </p>
                 <div className="flex flex-col justify-end h-auto align-middle gap-4">
                     <Link to="/signup">
-                        <button class="bg-violet-700 text-white font-semibold py-3 rounded-md w-full cursor-pointer">
+                        <button className="bg-violet-700 text-white font-semibold py-2 rounded-md w-full cursor-pointer">
                             Create Account
                         </button>
                     </Link>
                     <Link to="login">
-                        <button class="bg-violet-300 text-gray-900 font-semibold py-3 rounded-md w-full cursor-pointer">
+                        <button className="bg-violet-300 text-gray-900 font-semibold py-2 rounded-md w-full cursor-pointer">
                             Already Registered? Login
                         </button>
                     </Link>

@@ -55,7 +55,7 @@ const SignupPage = () => {
                                 type="email"
                                 value={emailAddress}
                                 onChange={(e) =>
-                                    setEmailAddress(e.value.target)
+                                    setEmailAddress(e.target.value)
                                 }
                                 required
                                 className="w-full border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-violet-500"
@@ -69,7 +69,7 @@ const SignupPage = () => {
                             <input
                                 type="password"
                                 value={password}
-                                onChange={(e) => setPassword(e.value.target)}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required
                                 className="w-full border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-violet-500"
                             />
@@ -82,7 +82,7 @@ const SignupPage = () => {
                             <input
                                 type="text"
                                 value={companyName}
-                                onChange={(e) => setCompanyName(e.value.target)}
+                                onChange={(e) => setCompanyName(e.target.value)}
                                 required
                                 className="w-full border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-violet-500"
                             />
@@ -98,7 +98,6 @@ const SignupPage = () => {
                                     <input
                                         type="radio"
                                         name="agency"
-                                        id="agency"
                                         required
                                         defaultChecked
                                     />
@@ -108,7 +107,6 @@ const SignupPage = () => {
                                     <input
                                         type="radio"
                                         name="agency"
-                                        id="agency"
                                         required
                                     />
                                     <span>No</span>
