@@ -3,10 +3,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
-    const [emailAddress, setEmailAddress] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const isFormValid = emailAddress.trim() !== "" && password.trim() !== "";
+    const isFormValid = email.trim() !== "" && password.trim() !== "";
 
     return (
         <div className="card">
@@ -24,27 +24,34 @@ const LoginPage = () => {
                     </div>
                     <form className="space-y-6 text-sm p-1">
                         <div className="relative">
-                            <label className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium">
-                                Email address
+                            <label
+                                htmlFor="email"
+                                className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium"
+                            >
+                                Email Address
                             </label>
                             <input
                                 type="email"
-                                value={emailAddress}
-                                onChange={(e) =>
-                                    setEmailAddress(e.target.value)
-                                }
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                id="email"
                                 required
+                                autoComplete="email"
                                 placeholder="Enter your email"
                                 className="w-full border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-violet-500"
                             />
                         </div>
 
                         <div className="relative">
-                            <label className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium">
+                            <label
+                                htmlFor="password"
+                                className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium"
+                            >
                                 Password
                             </label>
                             <input
                                 type="password"
+                                id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required

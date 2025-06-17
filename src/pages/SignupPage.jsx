@@ -20,12 +20,16 @@ const SignupPage = () => {
                     </div>
                     <form className="space-y-6 text-sm p-1">
                         <div className="relative">
-                            <label className="absolute -top-2 left-3 bg-gray-100 px-1 text-violet-600 text-xs font-medium">
+                            <label
+                                htmlFor="fullname"
+                                className="absolute -top-2 left-3 bg-gray-100 px-1 text-violet-600 text-xs font-medium"
+                            >
                                 Full Name
                                 <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="text"
+                                id="fullname"
                                 value={fulName}
                                 onChange={(e) => setFullName(e.target.value)}
                                 required
@@ -33,12 +37,16 @@ const SignupPage = () => {
                             />
                         </div>
                         <div className="relative">
-                            <label className="absolute -top-2 left-3 bg-gray-100 px-1 text-violet-600 text-xs font-medium">
+                            <label
+                                htmlFor="phoneNumber"
+                                className="absolute -top-2 left-3 bg-gray-100 px-1 text-violet-600 text-xs font-medium"
+                            >
                                 Phone number
                                 <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="text"
+                                id="phoneNumber"
                                 value={phoneNumber}
                                 onChange={(e) => setPhoneNumber(e.target.value)}
                                 required
@@ -47,12 +55,16 @@ const SignupPage = () => {
                         </div>
 
                         <div className="relative">
-                            <label className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium">
+                            <label
+                                htmlFor="emailAddress"
+                                className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium"
+                            >
                                 Email address
                                 <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="email"
+                                id="emailAddress"
                                 value={emailAddress}
                                 onChange={(e) =>
                                     setEmailAddress(e.target.value)
@@ -63,11 +75,15 @@ const SignupPage = () => {
                         </div>
 
                         <div className="relative">
-                            <label className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium">
+                            <label
+                                htmlFor="password"
+                                className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium"
+                            >
                                 Password <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="password"
+                                id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
@@ -76,11 +92,15 @@ const SignupPage = () => {
                         </div>
 
                         <div className="relative">
-                            <label className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium">
+                            <label
+                                htmlFor="companyName"
+                                className="absolute -top-2 left-3  bg-gray-100 px-1 text-violet-600 text-xs font-medium"
+                            >
                                 Company name
                             </label>
                             <input
                                 type="text"
+                                id="companyName"
                                 value={companyName}
                                 onChange={(e) => setCompanyName(e.target.value)}
                                 required
@@ -98,6 +118,7 @@ const SignupPage = () => {
                                     <input
                                         type="radio"
                                         name="agency"
+                                        id="yes"
                                         required
                                         defaultChecked
                                     />
@@ -106,6 +127,7 @@ const SignupPage = () => {
                                 <label className="flex items-center space-x-2">
                                     <input
                                         type="radio"
+                                        id="no"
                                         name="agency"
                                         required
                                     />

@@ -10,6 +10,7 @@ const LandingPage = () => {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Tempore eum provident corrupti, quos ad ea! Inventore?
                 </p>
+
                 <div className="flex flex-col justify-end h-auto align-middle gap-4">
                     <Link to="/signup">
                         <button className="bg-violet-700 text-white font-semibold py-2 rounded-md w-full cursor-pointer">
